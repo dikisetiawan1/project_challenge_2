@@ -1,6 +1,6 @@
 // TODO: Uncomment baris kode di bawah untuk meng-import komponen ContactItem
 import ContactItem from "../../components/ContactItem";
-
+import getAllContactsData from "../../services/index";
 import InputContactForm from "../../components/InputContactForm";
 import "../../assets/styles/style.css";
 
@@ -15,7 +15,10 @@ const ContactManager = () => {
   const handleGetContactsData = async () => {
     const res = await getAllContactsData();
     setContactsData(res?.data?.data);
+    
   };
+
+ 
 
   // TODO: Uncomment baris kode di bawah ini untuk memanggil fungsi handleGetContactsData setelah halaman contacts selesai dirender
   useEffect(() => {
